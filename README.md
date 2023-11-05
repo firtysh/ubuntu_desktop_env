@@ -29,13 +29,13 @@ Here's the exciting tech stack that makes this project possible:
 1. Clone this repository - it's like adopting a code puppy. 🐶
 
 ```bash
-git clone <>
+git clone https://github.com/firtysh/ubuntu_desktop_env.git
 ```
 
 2. Navigate to the project directory - welcome to your digital manor.
 
 ```bash
-cd directory
+cd ubuntu_desktop_env
 ```
 
 3. Install the required dependencies - like bringing in the digital furniture.
@@ -50,7 +50,7 @@ npm install
 npm run dev
 ```
 
-5. Open your web browser and access the application at http://localhost:3000. It's your new digital kingdom! 🏰
+5. Open your web browser and access the application at http://localhost:5173. It's your new digital kingdom! 🏰
 
 ## Screenshots
 
