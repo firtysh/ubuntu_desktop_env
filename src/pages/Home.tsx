@@ -1,4 +1,5 @@
-import Dragable from 'components/Dragable';
+// import { FileExplorer } from 'applications/FileExplorer';
+import { Terminal } from 'applications/Terminal';
 import MenuBar from 'components/MenuBar';
 import NotificationBar from 'components/NotificationBar';
 import { useEffect, useRef } from 'react';
@@ -25,7 +26,8 @@ const Home = () => {
       <div id="wrapper" className="flex flex-1">
         <MenuBar />
         <div ref={desktopRef} id="desktop" className="relative flex-1 overflow-hidden">
-          <Dragable desktopRef={desktopRef} />
+          <Terminal desktopRef={desktopRef} />
+          {/* <FileExplorer desktopRef={desktopRef} /> */}
         </div>
       </div>
     </>

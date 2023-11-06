@@ -27,7 +27,9 @@ const AppBar = ({ title, optional, parentRef, desktopRef }: AppBarProps) => {
     if (!appBarRef.current || !parentRef.current || !desktopRef.current) return;
     const appBar = appBarRef.current;
     const parent = parentRef.current;
-    const desktop = desktopRef.current;
+    const desktop = desktopRef.current; // desktopRef.current is the div with id="desktop"
+    console.log(desktop);
+
     const handleMouseMove = (e: MouseEvent) => {
       parent.style.top = `${e.clientY - coord.current.startY + coord.current.lastY}px`;
       parent.style.left = `${e.clientX - coord.current.startX + coord.current.lastX}px`;
@@ -36,20 +38,20 @@ const AppBar = ({ title, optional, parentRef, desktopRef }: AppBarProps) => {
       parent.style.cursor = 'grabbing';
       coord.current.startX = e.clientX;
       coord.current.startY = e.clientY;
-      desktop.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mousemove', handleMouseMove);
     };
     const handleMouseUp = () => {
       parent.style.cursor = 'auto';
-      desktop.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mousemove', handleMouseMove);
       coord.current.lastX = parent.offsetLeft;
       coord.current.lastY = parent.offsetTop;
     };
     appBar.addEventListener('mousedown', handleMouseDown);
-    appBar.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('mouseup', handleMouseUp);
 
     return () => {
       appBar.removeEventListener('mousedown', handleMouseDown);
-      appBar.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mouseup', handleMouseUp);
     };
   }, [parentRef, desktopRef]);
 
@@ -59,7 +61,7 @@ const AppBar = ({ title, optional, parentRef, desktopRef }: AppBarProps) => {
       className="h-10 bg-gray-900 shadow-inner shadow-[rgba(255,255,255,0.1)] flex items-center justify-center px-3 gap-3 rounded-t-lg"
     >
       <div>{optional}</div>
-      <div className="flex-1 font-bold text-center text-white">{title}</div>
+      <div className="flex-1 font-bold text-center text-white select-none">{title}</div>
       <div className="flex gap-3 text-center text-white">
         <div className="p-1 rounded-full hover:bg-[rgba(255,255,255,0.2)] h-6 w-6 flex items-center justify-center">
           <MinimizeIcon />
