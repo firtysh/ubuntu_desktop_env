@@ -15,7 +15,7 @@ const ApplicationBase = ({ applicationTitle, applicationBody, optionalHeader, de
         console.log('clicked on a application', e.target);
       }}
       ref={boxRef}
-      className=" flex flex-col min-w-[350px] w-[850px] min-h-[300px] h-[700px] bg-[rgba(0,0,0,0.1)] backdrop-blur absolute rounded-lg overflow-hidden shadow-inner shadow-white"
+      className=" flex flex-col min-w-[350px] w-[850px] min-h-[300px] h-[700px] bg-[rgba(0,0,0,0.1)] backdrop-blur absolute top-8 left-8 rounded-lg overflow-hidden shadow-inner shadow-white"
     >
       <AppBar optional={optionalHeader} title={applicationTitle} parentRef={boxRef} desktopRef={desktopRef} />
       {applicationBody}

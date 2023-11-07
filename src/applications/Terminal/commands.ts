@@ -111,4 +111,36 @@ export const commands: Commands = {
       return '';
     },
   },
+  ls: {
+    description: 'List files and folders',
+    exec: async () => {
+      // const handle = await window.showDirectoryPicker();
+      // console.log(await navigator.storage.getDirectory());
+      // const persist = await navigator.storage.persist();
+      // console.log(persist);
+      // console.log((await navigator.storage.estimate()).quota);
+      // function formatBytes(bytes, decimals = 2) {
+      //   if (!+bytes) return '0 Bytes';
+
+      //   const k = 1024;
+      //   const dm = decimals < 0 ? 0 : decimals;
+      //   const sizes = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+
+      //   const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+      //   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+      // }
+
+      // console.log(formatBytes((await navigator.storage.estimate()).usage, 2));
+
+      // const root = await navigator.storage.getDirectory();
+      // console.log(storage);
+
+      // for await (const [key, value] of storage.entries()) {
+      //   console.log({ key, value });
+      // }
+
+      return 'Still working on it';
+    },
+  },
 };
