@@ -1,5 +1,7 @@
 # 😎 Awesome Web Desktop Environment - Ubuntu GNOME Inspired
 
+[![wakatime](https://wakatime.com/badge/user/ed2063aa-478c-4505-8c9d-f0799d66c5c5/project/018ba0c4-06c5-401b-ab8b-6151414df7e7.svg)](https://wakatime.com/badge/user/ed2063aa-478c-4505-8c9d-f0799d66c5c5/project/018ba0c4-06c5-401b-ab8b-6151414df7e7)
+
 Welcome to the **Awesome Web Desktop Environment** project! 🚀 This is all about bringing the joy of the Ubuntu GNOME desktop environment into your web browser, purely for the fun of it! 😄
 
 ## Tech Stack
