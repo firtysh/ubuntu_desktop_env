@@ -11,7 +11,6 @@ type ContextMenuProps = {
 
 const ContextMenu: FC<ContextMenuProps> = ({ contextMenuVisible, contextMenuPos, context }) => {
   console.log(context);
-
   return (
     <div
       className={`inline-block z-50 bg-green-400 top-[${contextMenuPos.y}] left-[${contextMenuPos.x}]`}

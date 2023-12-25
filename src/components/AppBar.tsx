@@ -27,8 +27,8 @@ const AppBar = ({ title, optional, parentRef, desktopRef }: AppBarProps) => {
     if (!appBarRef.current || !parentRef.current || !desktopRef.current) return;
     const appBar = appBarRef.current;
     const parent = parentRef.current;
-    const desktop = desktopRef.current; // desktopRef.current is the div with id="desktop"
-    console.log(desktop);
+    // const desktop = desktopRef.current; // desktopRef.current is the div with id="desktop"
+    // console.log(desktop);
 
     const handleMouseMove = (e: MouseEvent) => {
       parent.style.top = `${e.clientY - coord.current.startY + coord.current.lastY}px`;
