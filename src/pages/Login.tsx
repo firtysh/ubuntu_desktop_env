@@ -1,13 +1,14 @@
 import { Navigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import { AiOutlineUser } from 'react-icons/ai';
-import { FormEvent } from 'react';
+import { FormEvent, useRef } from 'react';
 
 function Login() {
   const { username, setUsername } = useAuth();
+  const usernameRef = useRef<HTMLInputElement>(null);
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
-    setUsername('Suman');
+    setUsername(usernameRef.current?.value || '');
   };
   return username ? (
     <Navigate to="/" />
@@ -21,14 +22,28 @@ function Login() {
           <div className="text-[100px] p-4  rounded-full bg-[rgba(255,255,255,0.2)] overflow-hidden">
             <AiOutlineUser />
           </div>
-          <div className="">Suman Mandal</div>
+          {username ? (
+            <div className="font-bold">{username}</div>
+          ) : (
+            <input
+              ref={usernameRef}
+              type="text"
+              placeholder="Username"
+              name="username"
+              id="username"
+              required
+              className="px-3 py-2 mt-6 font-bold text-white bg-transparent border-2 border-white rounded-lg outline-none"
+            />
+          )}
           <input
             type="password"
             placeholder="Password"
             name="password"
-            id=""
-            className="px-3 py-2 mt-6 font-bold text-black rounded-lg outline-red-900"
+            id="password"
+            required
+            className="px-3 py-2 mt-2 font-bold text-black rounded-lg outline-red-900"
           />
+          <input type="submit" hidden />
         </form>
       </div>
     </>
