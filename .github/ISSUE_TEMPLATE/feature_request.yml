@@ -1,0 +1,23 @@
+name: 💡 Feature Request
+description: Suggest an idea for this project.
+title: 'Feature Request: Write a small description here'
+labels: enhancement
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Write a detailed description of the feature.
+    validations:
+      required: true
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: 'Checklist ✅'
+      options:
+        - label: "I checked and didn't find similar [issue](https://github.com/firtysh/ubuntu_desktop_env/issues)"
+          required: true
+        - label: 'I am participating in JWOC'
+          required: false
+        - label: 'I am willing to work on this issue (blank for no).'
+          required: false
