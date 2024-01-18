@@ -37,7 +37,7 @@ const NotificationBar = () => {
       </div>
       <div className="flex items-center text-xl">
         {isCharging ? <MdOutlineBatteryChargingFull /> : <MdOutlineBatteryFull />}
-        <div className="text-sm">{batteryLevel}%</div>
+        <div className="text-sm">{Math.round(batteryLevel)}%</div>
       </div>
     </div>
   );
